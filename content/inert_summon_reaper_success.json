@@ -1,0 +1,36 @@
+{
+	"id": "mgg.summon_reaper_success",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_souls.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "The Abyss Reaches Out",
+	"description": "By channeling the many thousands of souls into a human vessel, %PERSON_NAME has brought forth a disturbing power...",
+
+	"choices": [
+		{
+			"name": "We Answer",
+			"description": "Ser Leizhar has been summoned\n\nMenace, Profile and Panic are gained",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+						{"key": "MGG_SUMMON_REAPER", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+                        {"command": "CHANGE_DEATH", "argument": "0"},
+                        {"command": "ADD_TEMPORARY_WORLD_PANIC", "argument": "10"},
+                        {"command": "LOCATION_GAIN_SHADOW", "argument": "30"},
+						{"command": "GAIN_PROFILE", "argument": "20"},
+						{"command": "GAIN_MENACE", "argument": "30"},
+                        {"command": "CREATE_HERO_WARRIOR", "argument": "Leizhar//mgg.reaper_unit/portals.0_reaper.png"}
+					]
+				}
+			]
+		}
+	]
+}

@@ -13,7 +13,7 @@
 	"choices": [
 		{
 		    "name": "Bend To My Will",
-			"description": "Through sheer might you can try to command this beast to bow down to you.\n\n20% chance of failure (losing 4 hp)",
+			"description": "Through sheer might you can try to command this beast to bow down to you.\n\n20% chance of failure (losing 4 hp)\n\n[REQUIRES 6 MIGHT]\n\n[REQUIRES 3 COMMAND]",
 			"condition": "(stat_might > 5) & (stat_command > 2)",
 			"outcomes": [
 				{

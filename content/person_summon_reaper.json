@@ -1,0 +1,51 @@
+{
+	"id": "mgg.summon_reaper",
+	"modCredit": "Unknown807",
+	"imgCredit": "Nele-Diel",
+	"image": "portals.3_reaper_lands.jpg",
+	
+	"type": "PERSON",
+	"conditional": "is_agent & ($MGG_SUMMON_REAPER = 0) & is_ruins & human_soul_present & (modifier_level_death > 259)",
+	"probability": 1,
+
+	"name": "The Abyss Calls Out",
+	"description": "The souls are swirling, slowly overflowing these ruins. %PERSON_NAME has taken notice of this strange behaviour, they appear to want to take shape...",	
+	"choices": [
+		{
+		    "name": "Channel Their Demands",
+			"description": "Through ritual and sacrifice you attempt to guide the masses of souls into a physical vessel\n\n30% chance of failure\n\n[REQUIRES 9 LORE]",
+			"condition": "(stat_lore > 8)",
+			"outcomes": [
+				{
+			        "weight": 0.7,
+					"environment": [
+					],
+					"effects": [
+						{"command": "SHOW_EVENT", "argument": "mgg.summon_reaper_success"}
+					]
+				},
+				{
+			        "weight": 0.3,
+					"environment": [
+					],
+					"effects": [
+						{"command": "SHOW_EVENT", "argument": "mgg.summon_reaper_fail"}
+					]
+                }
+			]
+		},
+		{
+		    "name": "Perhaps It Is Nothing",
+			"description": "The strange goings-on of mindless energies doesn't interest you",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+					],
+					"effects": [
+					]
+				}
+			]
+		}
+	]
+}

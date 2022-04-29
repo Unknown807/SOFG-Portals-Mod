@@ -1,0 +1,30 @@
+{
+	"id": "mgg.summon_reaper_fail",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_failed_magic.jpeg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "Indecipherable",
+	"description": "%PERSON_NAME failed to understand the strange soul phenomenon and took 3 damage from dealing with the dead",
+
+	"choices": [
+		{
+			"name": "Perhaps Another Time Will Come",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+					],
+					"effects": [
+						{"command": "ADD_HP", "argument": "-3"},
+                        {"command": "CHANGE_DEATH", "argument": "0"}
+					]
+				}
+			]
+		}
+	]
+}
