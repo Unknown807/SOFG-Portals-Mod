@@ -1,0 +1,130 @@
+{
+	"id": "mgg.beast_merchant",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_traders.jpg",
+	
+	"type": "MOVE",
+	"conditional": "is_capital",
+	"probability": 0.05,
+
+	"name": "Traders From Faraway Lands",
+	"description": "Upon entering the city, %PERSON_NAME spots several unique looking caravans, draped in colours and clothing not seen in these parts before. They haul many cages, some big, some small, on great beasts of burden. The traders don't reveal their exact wares, so some caution is to be taken.",
+	"choices": [
+		{
+		    "name": "Something Cheap",
+			"description": "Exotic beasts don't come too cheap that is.\n\nYou receive a random minion\n\n[REQUIRES AT LEAST 100 GOLD]",
+            "condition": "(gold > 99)",
+			"outcomes": [
+                {
+			        "weight": 0.33,
+					"environment": [
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "1/1/6/1/Weak Spirit/portals.0_wraith.png"},
+                        {"command": "GAIN_GOLD", "argument": "-100"}
+					]
+				},
+				{
+			        "weight": 0.33,
+					"environment": [
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "3/2/2/1/Gremlin/portals.0_gremlin.png"},
+                        {"command": "GAIN_GOLD", "argument": "-100"}
+					]
+				},
+                {
+			        "weight": 0.33,
+					"environment": [
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "4/1/2/1/Snow Owl/portals.0_owl.jpeg"},
+                        {"command": "GAIN_GOLD", "argument": "-100"}
+					]
+				}
+			]
+		},
+        {
+		    "name": "Something Worthwhile",
+			"description": "If you're gonna spend gold, might as well get something reliable.\n\nYou receive a random minion\n\n[REQUIRES AT LEAST 200 GOLD]",
+            "condition": "(gold > 299)",
+			"outcomes": [
+                {
+			        "weight": 0.33,
+					"environment": [
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "3/3/5/2/Spirit Horse/portals.0_horse.png"},
+                        {"command": "GAIN_GOLD", "argument": "-200"}
+					]
+				},
+				{
+			        "weight": 0.33,
+					"environment": [
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "4/3/2/2/Feral Goblin/portals.0_feral_goblin.png"},
+                        {"command": "GAIN_GOLD", "argument": "-200"}
+					]
+				},
+                {
+			        "weight": 0.33,
+					"environment": [
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "2/1/8/2/Possessed Armour/portals.0_knight.png"},
+                        {"command": "GAIN_GOLD", "argument": "-200"}
+					]
+				}
+			]
+		},
+        {
+		    "name": "Truly Exotic",
+			"description": "Time to splurge.\n\nYou receive a random minion\n\n[REQUIRES AT LEAST 400 GOLD]",
+            "condition": "(gold > 299)",
+			"outcomes": [
+                {
+			        "weight": 0.33,
+					"environment": [
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "6/6/6/3/Wandering Drake/portals.0_firedrake.png"},
+                        {"command": "GAIN_GOLD", "argument": "-400"}
+					]
+				},
+				{
+			        "weight": 0.33,
+					"environment": [
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "4/8/8/3/Pegasus/portals.0_pegasus.jpg"},
+                        {"command": "GAIN_GOLD", "argument": "-400"}
+					]
+				},
+                {
+			        "weight": 0.33,
+					"environment": [
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "7/5/5/3/Soul Hound/portals.0_wolf_s.jpg"},
+                        {"command": "GAIN_GOLD", "argument": "-400"}
+					]
+				}
+			]
+		},
+		{
+		    "name": "Just Common Junk",
+			"description": "Best to keep walking and not get swindled.",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+					],
+					"effects": [
+					]
+				}
+			]
+		}
+	]
+}
