@@ -1,0 +1,30 @@
+{
+	"id": "mgg.summon_bird_success",
+	"modCredit": "Unknown807",
+	"imgCredit": "Alona Priest",
+	"image": "portals.3_forest.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "Stranger Yet",
+	"description": "The bird tries to wriggle free from the agent, to head off in a certain direction, perhaps %he should follow?",
+	"choices": [
+		{
+			"name": "This Is Not The End",
+			"description": "Seek where you must go next...",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+                        {"key": "MGG_HIDDEN_LAIR_GEN", "value": "1" ,"local":"False"}
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "1/1/0/0/Glowing Bird/portals.0_bird.jpg/139875"}
+					]
+				}
+			]
+		}
+	]
+}

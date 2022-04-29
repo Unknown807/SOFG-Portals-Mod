@@ -1,0 +1,30 @@
+{
+	"id": "mgg.create_hidden_lair",
+	"modCredit": "Unknown807",
+	"imgCredit": "Daniel Romanovsky",
+	"image": "portals.3_lair.jpg",
+	
+	"type": "LOCATION",
+	"conditional": "is_ruins & ((turn%50) = 0) & ($MGG_HIDDEN_LAIR_GEN = 1)",
+	"probability": 1,
+
+	"name": "Clue Obtained",
+	"description": "Following the bird's direction and tracking its movements has lead to the discovery of a hidden lair in faraway lands.",
+	"choices": [
+		{
+			"name": "Seek The Lair",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+                        {"key": "MGG_HIDDEN_LAIR_GEN", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+						{ "command": "ADD_MODIFIER", "argument": "Hidden Lair;portals.1_lair.jpg;Through tracking the flight of the glowing bird, it has revealed an out of the way lair. Who's lair it is, is yet to be discovered" },
+						{ "command": "PAN_TO", "argument": "LOCATION"}
+					]
+				}
+			]
+		}
+	]
+}
