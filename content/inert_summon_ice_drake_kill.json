@@ -1,0 +1,32 @@
+{
+	"id": "mgg.summon_ice_drake_kill",
+	"modCredit": "Unknown807",
+	"imgCredit": "Helge C Balzer",
+	"image": "portals.3_drake_slain.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "Great Drake Slain",
+	"description": "In the brutal fight that ensued, %PERSON_NAME was not able to hold back enough to subdue the Ice Drake and slew it. News of this shall spread quickly.",
+
+	"choices": [
+		{
+			"name": "A Legend Snuffed Out",
+			"description": "Gain 20 Profile\n\nLose 5 Menace",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+						{"key": "MGG_SUMMON_ICE_DRAKE", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+						{"command": "GAIN_PROFILE", "argument": "20"},
+						{"command": "GAIN_MENACE", "argument": "-5"}
+					]
+				}
+			]
+		}
+	]
+}

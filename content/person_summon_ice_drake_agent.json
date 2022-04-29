@@ -1,0 +1,59 @@
+{
+	"id": "mgg.summon_ice_drake_agent",
+	"modCredit": "Unknown807",
+	"imgCredit": "Alex Figini",
+	"image": "portals.3_tundra.jpg",
+	
+	"type": "PERSON",
+	"conditional": "is_agent & is_snow & ($MGG_SUMMON_ICE_DRAKE = 0)",
+	"probability": 0.05,
+
+	"name": "Icy Peril",
+	"description": "In the thick snowscape %PERSON_NAME sees large and menacing footprints, still recent. Before %he could blink, behind %him has appeared the deadly Ice Drake, the lone king in these frigid lands. It is now life or death\n\nYour agent has %HP hp.",	
+	"choices": [
+		{
+		    "name": "Bend To My Will",
+			"description": "Through sheer might you can try to command this beast to bow down to you.\n\n20% chance of failure (losing 4 hp)",
+			"condition": "(stat_might > 5) & (stat_command > 2)",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+					],
+					"effects": [
+						{"command": "SHOW_EVENT", "argument": "mgg.summon_ice_drake_success"}
+					]
+				},
+				{
+			        "weight": 0.2,
+					"environment": [
+					],
+					"effects": [
+						{"command": "SHOW_EVENT", "argument": "mgg.summon_ice_drake_fail"}
+					]
+				},
+				{
+			        "weight": 0.05,
+					"environment": [
+					],
+					"effects": [
+						{"command": "SHOW_EVENT", "argument": "mgg.summon_ice_drake_kill"}
+					]
+				}
+			]
+		},
+		{
+		    "name": "Law Low And Slink Away",
+			"description": "Flee from a potential fight with the ice drake",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+					],
+					"effects": [
+					]
+				}
+			]
+		}
+	]
+}

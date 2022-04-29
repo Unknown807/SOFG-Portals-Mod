@@ -1,0 +1,29 @@
+{
+	"id": "mgg.summon_ice_drake_fail",
+	"modCredit": "Unknown807",
+	"imgCredit": "Todd Lockwood",
+	"image": "portals.3_drake_flee.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "The Beast Cannot Be Tamed",
+	"description": "%PERSON_NAME fought a ferocious battle to subdue the beast yet %his strength failed %him and the Ice Drake remains free",
+
+	"choices": [
+		{
+			"name": "Flee While You Can",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+					],
+					"effects": [
+						{"command": "ADD_HP", "argument": "-4"}
+					]
+				}
+			]
+		}
+	]
+}

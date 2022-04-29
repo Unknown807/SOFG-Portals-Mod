@@ -9,7 +9,7 @@
 	"probability": 0.5,
 
 	"name": "Cheerful Frolicking",
-	"description": "On %UNIT_NAME's travels, %he came across a kindle of kittens playing in the grass. An innocent sight.",	
+	"description": "On %PERSON_NAME's travels, %he came across a kindle of kittens playing in the grass. An innocent sight.",	
 	"choices": [
 		{
 		    "name": "Come With",

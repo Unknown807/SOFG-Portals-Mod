@@ -1,0 +1,33 @@
+{
+	"id": "mgg.summon_ice_drake_success",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_drake_tamed.png",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "A Mighty Victory",
+	"description": "%PERSON_NAME has been triumphant in taming the mighty Ice Drake that once prowled the frozen tundra, news of this shall spread quickly.",
+
+	"choices": [
+		{
+			"name": "A Powerful Minion To Be Sure",
+			"description": "Gain Ice Drake Minion\n\nGain 10 Profile\n\nGain 5 Menace",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+						{"key": "MGG_SUMMON_ICE_DRAKE", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "6/5/5/3/The Ice Drake/portals.0_icedrake.jpg"},
+						{"command": "GAIN_PROFILE", "argument": "10"},
+						{"command": "GAIN_MENACE", "argument": "5"}
+					]
+				}
+			]
+		}
+	]
+}
