@@ -1,0 +1,27 @@
+{
+	"id": "mgg.start_portals_mod",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_portal.jpg",
+	
+	"type": "WORLD",
+	"conditional": "($MGG_MOD_WORKING = 0)",
+	"probability": 1,
+
+	"name": "Portals: Abysses of Monsters and Magic",
+	"description": "As you begin to make your mark upon the land, so too do others. Slowly injecting their foul magic into this realm, they ready it for the arrival of their spawn.",
+
+	"choices": [
+		{
+			"name": "A faint feeling for now...",
+			"outcomes": [
+				{
+					"weight": 0.8,
+					"environment": [
+						{"key": "MGG_MOD_WORKING", "value": "-1" ,"local":"False"}
+					]
+				}
+			]
+		}
+	]
+}

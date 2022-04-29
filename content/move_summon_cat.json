@@ -1,0 +1,62 @@
+{
+	"id": "mgg.summon_cat",
+	"modCredit": "Unknown807",
+	"imgCredit": "Grass Fields by Bonnie Bruno",
+	"image": "portals.3_fields.jpg",
+	
+	"type": "MOVE",
+	"conditional": "is_grass & ($MGG_SUMMON_CAT = 0)",
+	"probability": 0.5,
+
+	"name": "Cheerful Frolicking",
+	"description": "On %UNIT_NAME's travels, %he came across a kindle of kittens playing in the grass. An innocent sight.",	
+	"choices": [
+		{
+		    "name": "Come With",
+			"description": "Either for companionship or meat shields, these kittens will come in useful\n\n gain 3 cat minions (1 atk, 1 hp, 0 def)",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+						{"key": "MGG_SUMMON_CAT", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "1/1/0/0/Kitten/portals.0_cat.jpg"},
+						{"command": "GENERATE_MINION", "argument": "1/1/0/0/Kitten/portals.0_cat.jpg"},
+						{"command": "GENERATE_MINION", "argument": "1/1/0/0/Kitten/portals.0_cat.jpg"}
+					]
+				}
+			]
+		},
+		{
+		    "name": "Weak...",
+			"description": "The sight of weakness disgusts your agent and the opportunity to snuff it out delights\n\nYour agent gains 5 menace\n\n[REQUIRES A LIKING FOR CRUELTY]",
+			"condition": "(person_preference_cruel > 19)",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+						{"key": "MGG_SUMMON_CAT", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+						{"command": "GAIN_MENACE", "argument": "5"}
+					]
+				}
+			]
+		},
+		{
+		    "name": "No Interest",
+			"description": "Ignore the kittens (this event won't appear again)",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+						{"key": "MGG_SUMMON_CAT", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+					]
+				}
+			]
+		}
+	]
+}
