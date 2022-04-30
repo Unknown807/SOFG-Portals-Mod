@@ -1,0 +1,44 @@
+{
+	"id": "mgg.summon_squid",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_squid.jpg",
+	
+	"type": "MOVE",
+	"conditional": "is_coastal & ($MGG_SUMMON_SQUID=0)",
+	"probability": 1,
+
+	"name": "Call From The Deep",
+	"description": "While your agent was travelling, a strange creature approached %him. It seeks aid in spreading the influence of the Deep Ones in this region, if you accept it promises it will grant you a prophecy.",
+	"choices": [
+		{
+		    "name": "Give Aid",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+                        {"key": "MGG_SUMMON_SQUID", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+                        {"command": "GENERATE_MINION", "argument": "2/2/5/1/Oracle/portals.0_squid.png"},
+                        {"command": "TEMPORARY_LORE", "argument": "20/2"}
+					]
+				}
+			]
+		},
+        {
+		    "name": "No Interest",
+            "description": "(this event won't appear again)",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+                        {"key": "MGG_SUMMON_SQUID", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+					]
+				}
+			]
+		}
+	]
+}

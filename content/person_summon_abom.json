@@ -1,0 +1,44 @@
+{
+	"id": "mgg.summon_abom",
+	"modCredit": "Unknown807",
+	"imgCredit": "LorennTyr",
+	"image": "portals.3_plague.jpg",
+	
+	"type": "PERSON",
+	"conditional": "is_agent & ($MGG_SUMMON_ABOM = 0) & (location_shadow > 49) & (modifier_level_plague > 259)",
+	"probability": 1,
+
+	"name": "The Rot Moves",
+	"description": "As shadow and sludge meld, noxious fumes spread and life ebbs, hideous abominations start to form...",	
+	"choices": [
+		{
+		    "name": "Seize The Opportunity",
+			"description": "[REQUIRES 6 LORE]\n\n[REQUIRES 4 COMMAND]",
+			"condition": "(stat_lore > 5) & (stat_command > 3)",
+			"outcomes": [
+				{
+			        "weight": 0.7,
+					"environment": [
+                        {"key": "MGG_SUMMON_ABOM", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+						{"command": "GENERATE_MINION", "argument": "8/2/3/4/Abomination/portals.0_abom.jpg"}
+					]
+				}
+			]
+		},
+		{
+		    "name": "Not Interested",
+			"description": "I would not want to be near such vile things",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+					],
+					"effects": [
+					]
+				}
+			]
+		}
+	]
+}
