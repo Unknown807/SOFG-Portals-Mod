@@ -1,0 +1,40 @@
+{
+	"id": "mgg.hunter_unit_1",
+	"modCredit": "Unknown807",
+	"imgCredit": "Champion By Erenarik",
+	"image": "portals.3_hero.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "The Slayer",
+	"description": "Out from the Silver Portal comes Ithmor Silver-Blight, hearing humanity's cries and seeking to stop the seeping of corrupting powers into this realm, Ithmor has come to lay to rest all those who would oppose life.",
+
+
+	"choices": [
+		{
+			"name": "Evil Be Purged",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+					],
+					"effects": [
+						{ "command": "SET_UNIT_COMMANDED", "argument": "False" },
+						{ "command": "SET_AGE", "argument": "20" },
+						{ "command": "SET_MIGHT", "argument": "10" },
+						{ "command": "SET_LORE", "argument": "5" },
+						{ "command": "SET_INTRIGUE", "argument": "5" },
+						{ "command": "SET_COMMAND", "argument": "10"},
+						{ "command": "GAIN_PROFILE", "argument": "100"},
+						{ "command": "GAIN_GOLD", "argument": "200"},
+						{ "command": "GENERATE_MINION", "argument": "4/4/6/0/Faithful Paladin/portals.0_faith.jpg"},
+                        { "command": "GENERATE_MINION", "argument": "4/4/6/0/Faithful Paladin/portals.0_faith.jpg"},
+                        { "command": "GENERATE_MINION", "argument": "4/4/6/0/Faithful Paladin/portals.0_faith.jpg"}                   
+					]
+				}
+			]
+		}
+	]
+}

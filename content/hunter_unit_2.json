@@ -1,0 +1,40 @@
+{
+	"id": "mgg.hunter_unit_2",
+	"modCredit": "Unknown807",
+	"imgCredit": "Toby Lewin",
+	"image": "portals.3_hero_2.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "The Hunter",
+	"description": "One who disregards evil's plots and spits in the faces of so called 'gods', An elite hunter and spatial manipulator, he travels tirelessly, decimating shadow wherever it hides.",
+
+
+	"choices": [
+		{
+			"name": "Evil Be Purged",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+					],
+					"effects": [
+						{ "command": "SET_UNIT_COMMANDED", "argument": "False" },
+						{ "command": "SET_AGE", "argument": "20" },
+						{ "command": "SET_MIGHT", "argument": "12" },
+						{ "command": "SET_LORE", "argument": "8" },
+						{ "command": "SET_INTRIGUE", "argument": "8" },
+						{ "command": "SET_COMMAND", "argument": "12"},
+						{ "command": "GAIN_PROFILE", "argument": "100"},
+						{ "command": "GAIN_GOLD", "argument": "200"},
+						{ "command": "GENERATE_MINION", "argument": "3/4/9/0/Vortex Shield/portals.0_vortex.jpg"},
+                        { "command": "GENERATE_MINION", "argument": "3/4/9/0/Vortex Shield/portals.0_vortex.jpg"},
+                        { "command": "GENERATE_MINION", "argument": "3/4/9/0/Vortex Shield/portals.0_vortex.jpg"}
+					]
+				}
+			]
+		}
+	]
+}

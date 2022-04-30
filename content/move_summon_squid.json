@@ -5,8 +5,8 @@
 	"image": "portals.3_squid.jpg",
 	
 	"type": "MOVE",
-	"conditional": "is_coastal & ($MGG_SUMMON_SQUID=0)",
-	"probability": 1,
+	"conditional": "is_coastal & ($MGG_SUMMON_SQUID=0) & (modifier_level_deep_ones > 99)",
+	"probability": 0.1,
 
 	"name": "Call From The Deep",
 	"description": "While your agent was travelling, a strange creature approached %him. It seeks aid in spreading the influence of the Deep Ones in this region, if you accept it promises it will grant you a prophecy.",

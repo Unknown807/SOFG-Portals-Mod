@@ -1,0 +1,41 @@
+{
+	"id": "mgg.create_hunter_portal_2",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_dawn.png",
+	
+	"type": "LOCATION",
+	"conditional": "(is_city | is_town | is_village | is_hamlet) & ($MGG_SPAWN_HUNTER_PORTAL_2 = 0)  & (turn > 209)",
+	"probability": 1,
+
+	"name": "We Will Not Fall Today",
+	"description": "In evil's quest to conquer and spread through humanity's weaknesses, there are those who will resist...",
+	"choices": [
+		{
+			"name": "He Seeks To Disrupt",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+                        {"key": "MGG_SPAWN_HUNTER_PORTAL_2", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+						{ "command": "ADD_MODIFIER", "argument": "Artificial Abyss;portals.1_portal_4.jpg;A fissure between realities, through comes a defender of humanity"},
+						{ "command": "PAN_TO", "argument": "LOCATION"},
+
+                        {"command": "LOCATION_GAIN_SHADOW", "argument": "-100"},
+                        {"command": "LOCATION_RULER_GAIN_SHADOW", "argument": "-100"},
+                        
+                        {"command": "CHANGE_UNREST", "argument": "0"},
+                        {"command": "CHANGE_DEVASTATION", "argument": "0"},
+                        {"command": "CHANGE_MADNESS", "argument": "0"},
+                        {"command": "CHANGE_PLAGUE", "argument": "0"},
+                        {"command": "CHANGE_WELL_OF_SHADOWS", "argument": "0"},
+                        
+                        {"command": "CREATE_HERO_WARRIOR", "argument": "Cynak/Pulse-Monger/mgg.hunter_unit_2/portals.2_hunter3.png"}
+					]
+				}
+			]
+		}
+	]
+}
