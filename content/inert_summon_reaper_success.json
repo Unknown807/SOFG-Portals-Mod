@@ -14,10 +14,10 @@
 	"choices": [
 		{
 			"name": "We Answer",
-			"description": "Ser Leizhar has been summoned\n\nMenace, Profile and Panic are gained",
+			"description": "The thing from the abyss has been summoned\n\nMenace, Profile and Panic are gained",
 			"outcomes": [
 				{
-					"weight": 0.7,
+					"weight": 0.6,
 					"environment": [
 						{"key": "MGG_SUMMON_REAPER", "value": "-1" ,"local":"False"}
 					],
@@ -25,9 +25,37 @@
                         {"command": "CHANGE_DEATH", "argument": "0"},
                         {"command": "ADD_TEMPORARY_WORLD_PANIC", "argument": "10"},
                         {"command": "LOCATION_GAIN_SHADOW", "argument": "30"},
-						{"command": "GAIN_PROFILE", "argument": "20"},
-						{"command": "GAIN_MENACE", "argument": "30"},
-                        {"command": "CREATE_HERO_WARRIOR", "argument": "Leizhar//mgg.reaper_unit/portals.0_reaper.png"}
+						{"command": "GAIN_PROFILE", "argument": "50"},
+						{"command": "GAIN_MENACE", "argument": "50"},
+                        {"command": "CREATE_HERO_WARRIOR", "argument": "Leizhar//mgg.reaper_unit_1/portals.0_reaper.png"}
+					]
+				},
+								{
+					"weight": 0.3,
+					"environment": [
+						{"key": "MGG_SUMMON_REAPER", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+                        {"command": "CHANGE_DEATH", "argument": "0"},
+                        {"command": "ADD_TEMPORARY_WORLD_PANIC", "argument": "10"},
+                        {"command": "LOCATION_GAIN_SHADOW", "argument": "30"},
+						{"command": "GAIN_PROFILE", "argument": "50"},
+						{"command": "GAIN_MENACE", "argument": "50"},
+                        {"command": "CREATE_HERO_WARRIOR", "argument": "Vaukras//mgg.reaper_unit_2/portals.0_reaper2.jpg"}
+					]
+				},
+								{
+					"weight": 0.1,
+					"environment": [
+						{"key": "MGG_SUMMON_REAPER", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+                        {"command": "CHANGE_DEATH", "argument": "0"},
+                        {"command": "ADD_TEMPORARY_WORLD_PANIC", "argument": "10"},
+                        {"command": "LOCATION_GAIN_SHADOW", "argument": "30"},
+						{"command": "GAIN_PROFILE", "argument": "50"},
+						{"command": "GAIN_MENACE", "argument": "50"},
+                        {"command": "CREATE_HERO_WARRIOR", "argument": "Silus//mgg.reaper_unit_3/portals.0_mist_0.jpg"}
 					]
 				}
 			]

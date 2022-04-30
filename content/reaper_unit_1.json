@@ -1,5 +1,5 @@
 {
-	"id": "mgg.reaper_unit",
+	"id": "mgg.reaper_unit_1",
 	"modCredit": "Unknown807",
 	"imgCredit": "Aoi Ogata",
 	"image": "portals.3_reaper_summon.jpg",
@@ -23,12 +23,14 @@
 					"effects": [
 						{ "command": "SET_UNIT_COMMANDED", "argument": "True" },
 						{ "command": "SET_AGE", "argument": "20" },
-						{ "command": "SET_MIGHT", "argument": "8" },
+						{ "command": "SET_MIGHT", "argument": "2" },
 						{ "command": "SET_LORE", "argument": "10" },
-						{ "command": "SET_INTRIGUE", "argument": "8" },
-						{ "command": "SET_COMMAND", "argument": "8"},
+						{ "command": "SET_INTRIGUE", "argument": "2" },
+						{ "command": "SET_COMMAND", "argument": "2"},
 						{ "command": "MAKE_CAST_MEMBER", "argument": "" },
 						{ "command": "GAIN_MENACE", "argument": "50"},
+						{ "command": "GAIN_PROFILE", "argument": "50"},
+						{ "command": "PLACE_ARCANE_SECRET", "argument": ""},
 						{ "command": "GENERATE_MINION", "argument": "4/4/6/0/Husk/portals.0_reaper_minion_1.jpg"},
                         { "command": "GENERATE_MINION", "argument": "4/4/6/0/Husk/portals.0_reaper_minion_2.jpg"},
                         { "command": "GENERATE_MINION", "argument": "4/4/6/0/Husk/portals.0_reaper_minion_3.jpg"}

@@ -73,7 +73,7 @@
 					"environment": [
 					],
 					"effects": [
-						{"command": "GENERATE_MINION", "argument": "2/1/8/2/Possessed Armour/portals.0_knight.png"},
+						{"command": "GENERATE_MINION", "argument": "2/8/2/2/Shadowmancer/portals.0_shadow_s.jpg"},
                         {"command": "GAIN_GOLD", "argument": "-200"}
 					]
 				}

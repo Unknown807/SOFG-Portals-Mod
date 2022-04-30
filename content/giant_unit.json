@@ -27,7 +27,8 @@
 						{ "command": "SET_LORE", "argument": "0" },
 						{ "command": "SET_INTRIGUE", "argument": "0" },
 						{ "command": "SET_COMMAND", "argument": "8"},
-						{ "command": "GAIN_MENACE", "argument": "200"},
+						{ "command": "GAIN_MENACE", "argument": "50"},
+						{ "command": "GAIN_PROFILE", "argument": "50"},
 						{ "command": "GENERATE_MINION", "argument": "5/5/5/0/Soldier Of Flame/portals.0_fire_s.png"},
                         { "command": "GENERATE_MINION", "argument": "5/5/5/0/Soldier Of Flame/portals.0_fire_s.png"},
                         { "command": "GENERATE_MINION", "argument": "5/5/5/0/Soldier Of Flame/portals.0_fire_s.png"}

@@ -2,7 +2,7 @@
 	"id": "mgg.summon_reaper_fail",
 	"modCredit": "Unknown807",
 	"imgCredit": "",
-	"image": "portals.3_failed_magic.jpeg",
+	"image": "portals.3_failed_magic.jpg",
 	
 	"type": "INERT",
 	"conditional": "1=1",

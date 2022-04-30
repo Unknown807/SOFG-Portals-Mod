@@ -1,0 +1,41 @@
+{
+	"id": "mgg.reaper_unit_2",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_reaper_summon_2.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "The Thing From The Abyss",
+	"description": "Writhing, pulsating, the darkness has been fused together by the howls of a thousand dead, Ser Vaukras rises to rule these lands once more.",
+
+
+	"choices": [
+		{
+			"name": "Hold Fast",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+					],
+					"effects": [
+						{ "command": "SET_UNIT_COMMANDED", "argument": "True" },
+						{ "command": "SET_AGE", "argument": "20" },
+						{ "command": "SET_MIGHT", "argument": "10" },
+						{ "command": "SET_LORE", "argument": "1" },
+						{ "command": "SET_INTRIGUE", "argument": "1" },
+						{ "command": "SET_COMMAND", "argument": "10"},
+						{ "command": "MAKE_CAST_MEMBER", "argument": "" },
+						{ "command": "GAIN_MENACE", "argument": "100"},
+                        { "command": "GAIN_PROFILE", "argument": "50"},
+						{ "command": "GENERATE_MINION", "argument": "6/6/6/0/Possessed Armour/portals.0_knight.png"},
+                        { "command": "GENERATE_MINION", "argument": "6/6/6/0/Possessed Armour/portals.0_knight.png"},
+                        { "command": "GENERATE_MINION", "argument": "6/6/6/0/Possessed Armour/portals.0_knight.png"}
+					]
+				}
+			]
+		}
+	]
+}

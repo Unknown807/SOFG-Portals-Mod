@@ -1,0 +1,40 @@
+{
+	"id": "mgg.reaper_unit_3",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_reaper_summon_3.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "The Thing From The Abyss",
+	"description": "Writhing, pulsating, the darkness has been fused together by the howls of a thousand dead, Ser Silus rises to rule these lands once more.",
+
+
+	"choices": [
+		{
+			"name": "Hold Fast",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+					],
+					"effects": [
+						{ "command": "SET_UNIT_COMMANDED", "argument": "True" },
+						{ "command": "SET_AGE", "argument": "20" },
+						{ "command": "SET_MIGHT", "argument": "2" },
+						{ "command": "SET_LORE", "argument": "2" },
+						{ "command": "SET_INTRIGUE", "argument": "10" },
+						{ "command": "SET_COMMAND", "argument": "2"},
+						{ "command": "MAKE_CAST_MEMBER", "argument": "" },
+                        { "command": "GAIN_GOLD", "argument": "150" },
+						{ "command": "GENERATE_MINION", "argument": "8/2/2/0/Shadow Spy/portals.0_spy.jpg"},
+                        { "command": "GENERATE_MINION", "argument": "2/8/2/0/Shadow Spy/portals.0_spy.jpg"},
+                        { "command": "GENERATE_MINION", "argument": "2/2/8/0/Shadow Spy/portals.0_spy.jpg"}
+					]
+				}
+			]
+		}
+	]
+}
