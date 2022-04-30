@@ -5,14 +5,14 @@
 	"image": "portals.3_dark_portal.png",
 	
 	"type": "LOCATION",
-	"conditional": "is_sea & (turn > 149) & ($MGG_SPAWN_DARK_PORTAL = 0)",
+	"conditional": "is_sea & (turn > 199) & ($MGG_SPAWN_DARK_PORTAL = 0)",
 	"probability": 1,
 
-	"name": "The Barriers Weaken",
-	"description": "As otherwordly influences grow, it is only a matter of time before something gives. A fissure between realities, a gate into an abyss has erupted open, allowing all manner of creatures in.",
+	"name": "The Barriers Crumble",
+	"description": "Darker powers have managed to grab hold of this realm, tearing open a chasm and allowing monsters to roam.",
 	"choices": [
 		{
-			"name": "Chaos Is Beginning",
+			"name": "Chaos",
 			"outcomes": [
 				{
 					"weight": 0.7,

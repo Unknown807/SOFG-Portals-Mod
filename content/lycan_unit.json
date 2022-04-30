@@ -1,0 +1,40 @@
+{
+	"id": "mgg.lycan_unit",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_wolves.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "Lord Of The Hunt",
+	"description": "Out from the Wild Portal comes %PERSON_NAME, a Lycan wielding command of the forces of nature, here to devastate the towns and villages of man.",
+
+
+	"choices": [
+		{
+			"name": "All Will Be Hunted",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+					],
+					"effects": [
+						{ "command": "SET_UNIT_COMMANDED", "argument": "True" },
+						{ "command": "SET_AGE", "argument": "20" },
+						{ "command": "SET_MIGHT", "argument": "6" },
+						{ "command": "SET_LORE", "argument": "2" },
+						{ "command": "SET_INTRIGUE", "argument": "1" },
+						{ "command": "SET_COMMAND", "argument": "4"},
+						{ "command": "GAIN_MENACE", "argument": "25"},
+						{ "command": "GAIN_PROFILE", "argument": "25"},
+						{ "command": "GENERATE_MINION", "argument": "3/2/4/0/Wolf Brother/portals.0_lycan.jpg"},
+                        { "command": "GENERATE_MINION", "argument": "3/2/4/0/Wolf Brother/portals.0_lycan.jpg"},
+                        { "command": "GENERATE_MINION", "argument": "3/2/4/0/Wolf Brother/portals.0_lycan.jpg"}
+					]
+				}
+			]
+		}
+	]
+}
