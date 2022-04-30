@@ -1,0 +1,43 @@
+{
+	"id": "mgg.summon_daughter",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_market.jpg",
+	
+	"type": "MOVE",
+	"conditional": "is_city & is_desert & (modifier_level_arcane_fortress > 0) & has_daughter_minion & ($MGG_SUMMON_DAUGHTER=0)",
+	"probability": 0.15,
+
+	"name": "A Revelation In Magic",
+	"description": "\"One who has aligned %himself with the interests of the First Daughter and with proficient magic ability, will finally show promise.\"\n\nA woman draped in fine white and gold silk appears before your agent, seemingly out of nowhere.\n\n\"I wish to aid you in undoing of creation\"",
+	"choices": [
+		{
+		    "name": "Welcome",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+                        {"key": "MGG_SUMMON_DAUGHTER", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+                        {"command": "GENERATE_MINION", "argument": "3/2/4/0/Daughter Raya/portals.0_priestess.jpg"}
+					]
+				}
+			]
+		},
+        {
+		    "name": "No Interest",
+            "description": "Ignore the woman (this event won't appear again)",
+			"outcomes": [
+				{
+			        "weight": 0.8,
+					"environment": [
+                        {"key": "MGG_SUMMON_DAUGHTER", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+					]
+				}
+			]
+		}
+	]
+}

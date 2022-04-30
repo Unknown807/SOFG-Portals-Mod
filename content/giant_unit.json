@@ -1,0 +1,39 @@
+{
+	"id": "mgg.giant_unit",
+	"modCredit": "Unknown807",
+	"imgCredit": "Anthony Avon",
+	"image": "portals.3_blaze.jpg",
+	
+	"type": "INERT",
+	"conditional": "1=1",
+	"probability": 1,
+
+	"name": "Lord Of Flame",
+	"description": "Out from the Dark Portal comes %PERSON_NAME, a Fire Giant wielding command of fiery and demonic forces, here to engulf these lands in fire and ash.",
+
+
+	"choices": [
+		{
+			"name": "All Will Be Scorched Earth",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+					],
+					"effects": [
+						{ "command": "SET_UNIT_COMMANDED", "argument": "True" },
+						{ "command": "SET_AGE", "argument": "20" },
+						{ "command": "SET_MIGHT", "argument": "12" },
+						{ "command": "SET_LORE", "argument": "0" },
+						{ "command": "SET_INTRIGUE", "argument": "0" },
+						{ "command": "SET_COMMAND", "argument": "8"},
+						{ "command": "GAIN_MENACE", "argument": "200"},
+						{ "command": "GENERATE_MINION", "argument": "5/5/5/0/Soldier Of Flame/portals.0_fire_s.png"},
+                        { "command": "GENERATE_MINION", "argument": "5/5/5/0/Soldier Of Flame/portals.0_fire_s.png"},
+                        { "command": "GENERATE_MINION", "argument": "5/5/5/0/Soldier Of Flame/portals.0_fire_s.png"}
+					]
+				}
+			]
+		}
+	]
+}

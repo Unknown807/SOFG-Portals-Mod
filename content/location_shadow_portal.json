@@ -1,0 +1,34 @@
+{
+	"id": "mgg.create_shadow_portal",
+	"modCredit": "Unknown807",
+	"imgCredit": "",
+	"image": "portals.3_dark_portal.png",
+	
+	"type": "LOCATION",
+	"conditional": "is_sea & (turn > 149) & ($MGG_SPAWN_DARK_PORTAL = 0)",
+	"probability": 1,
+
+	"name": "The Barriers Weaken",
+	"description": "As otherwordly influences grow, it is only a matter of time before something gives. A fissure between realities, a gate into an abyss has erupted open, allowing all manner of creatures in.",
+	"choices": [
+		{
+			"name": "Chaos Is Beginning",
+			"outcomes": [
+				{
+					"weight": 0.7,
+					"environment": [
+                        {"key": "MGG_SPAWN_DARK_PORTAL", "value": "-1" ,"local":"False"}
+					],
+					"effects": [
+						{ "command": "ADD_MODIFIER", "argument": "Dark Portal;portals.1_portal_2.jpg;A fissure between realities, bridging the gap to darkness"},
+						{ "command": "PAN_TO", "argument": "LOCATION"},
+
+                        {"command": "ADD_TEMPORARY_WORLD_PANIC", "argument": "10"},
+                        {"command": "LOCATION_GAIN_SHADOW", "argument": "10"},
+                        {"command": "CREATE_HERO_WARRIOR", "argument": "Uthos//mgg.giant_unit/portals.0_firegiant.png"}
+					]
+				}
+			]
+		}
+	]
+}
